@@ -2,7 +2,7 @@ package dataStructures;
 
 
 /**
- * Stack ADT implementation using a static Array
+ * Stack ADT (Array) implementation
  * @author Harry Martin
  *
  * @param <T>
