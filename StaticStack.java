@@ -1,5 +1,6 @@
 package dataStructures;
 
+
 /**
  * Stack ADT implementation using a static Array
  * @author Harry Martin
@@ -7,7 +8,7 @@ package dataStructures;
  * @param <T>
  */
 
-public class StaticStack<T> {
+public class StaticStack<T> extends Stack<T>{
 	
 	private final Object[] data;
 	private int top;
@@ -23,9 +24,9 @@ public class StaticStack<T> {
 	public boolean Full() {
 		return top == data.length;
 	}
+
 	
-	public void push(T e) throws Exception {
-		
+	public void Push(T e) throws Exception {
 		if(Empty()) {
 			data[top++] = e;
 			
@@ -35,24 +36,25 @@ public class StaticStack<T> {
 		}else {
 			data[top++] = e;
 		}
+		
 	}
-	
+
 	@SuppressWarnings("unchecked")
-	public T pop() throws Exception{
+	public T Pop() throws Exception {
 		if(Empty()) {
 			throw new Exception("Cannot pop element from stack because stack is empty");
 		}else {
 			return (T)data[--top];
 		}
 	}
-	
+
 	@SuppressWarnings("unchecked")
-	public T peek() throws Exception{
+	public T Peek() throws Exception {
 		if(Empty()) {
 			throw new Exception("Cannot peek element in stack because stack is empty");
 		}else {
 			return (T)data[top-1];
 		}
 	}
-	
+
 }
