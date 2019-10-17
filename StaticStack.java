@@ -8,7 +8,7 @@ package dataStructures;
  * @param <T>
  */
 
-public class StaticStack<T> extends Stack<T>{
+public class StaticStack<T> implements Stack<T>{
 	
 	private final Object[] data;
 	private int top;
